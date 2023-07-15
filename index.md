@@ -7,12 +7,12 @@ hero:
   text: "To make easy-to-use and funny tools."
   tagline: The more innocent, the better.
   actions:
-    - theme: brand
-      text: Getting Start To Learn
-      link: /markdown-examples
-    - theme: alt
-      text: Tech Roadmap
-      link: /api-examples
+    # - theme: brand
+    #   text: Getting Start To Learn
+    #   link: /markdown-examples
+    # - theme: alt
+    #   text: Tech Roadmap
+    #   link: /api-examples
 
 features:
   - icon: ⌨️
@@ -28,5 +28,11 @@ features:
     details: 魔改自markdown-resume，校招生用它来写简历，非常的nice！
     link: http://bio.vinsp.top
     linkText: 我也要写一份
+  - icon: 
+      src: /assets/pnpm.svg
+    title: pnpm 下载脚本
+    details: 暂时解决pnpm官方install脚本无法安装问题，相信我，给你一个舒适解压的进度条
+    link: docs/pnpm/pnpm-mirror.md
+    linkText: 安装pnpm
 ---
 
