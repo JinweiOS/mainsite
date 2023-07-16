@@ -16,14 +16,6 @@ pnpm是目前使用感受上最佳的一个Node.js包管理工具，它有很多
 iwr https://gitee.com/beingthink/pnpm/releases/download/v8.6.7/install-mirror.ps1 -useb | iex
 ```
 
-## 切换pnpm镜像源
-
-此命令执行后，从新打开命令行，执行命令 `pnpm --version` 验证安装。之后为切换pnpm的镜像源为淘宝镜像源。
-
-```shell
-pnpm config set registry https://registry.npmmirror.com
-```
-
 ## 安装lts版本Node.js
 
 使用pnpm的env命令安装最新Node.js的lts版本。

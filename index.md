@@ -29,7 +29,7 @@ features:
     link: http://bio.vinsp.top
     linkText: 我也要写一份
   - icon: 
-      src: /assets/pnpm.svg
+      src: /pnpm.svg
     title: pnpm 下载脚本
     details: 暂时解决pnpm官方install脚本无法安装问题，相信我，给你一个舒适解压的进度条
     link: docs/pnpm/pnpm-mirror.md
