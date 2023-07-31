@@ -11,7 +11,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: 'Pnpm安装', link: '/docs/pnpm/pnpm-mirror.md' }
+      { text: 'Pnpm安装', link: '/docs/pnpm/pnpm-mirror.md' },
+      { text: '博客', link: '/docs/blog/2023/0730-babel-usage.md' }
     ],
 
     sidebar: [
@@ -24,14 +25,22 @@ export default defineConfig({
       // },
       {
         text: 'Pnpm',
+        collapsed: true,
         items: [
           { text: 'pnpm镜像脚本', link: '/docs/pnpm/pnpm-mirror.md' }
+        ]
+      },
+      {
+        text: '博客',
+        collapsed: true,
+        items: [
+          { text: 'Babel最佳实践', link: '/docs/blog/2023/0730-babel-usage.md' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/beingthink  ' },
+      { icon: 'github', link: 'https://github.com/beingthink' },
     ]
   }
 })
