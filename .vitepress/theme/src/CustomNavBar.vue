@@ -210,13 +210,13 @@ const classes = computed(() => ({
     height: 32px;
   }
 
-  .VPNavBar.has-sidebar .curtain::before {
+  /* .VPNavBar.has-sidebar .curtain::before {
     display: block;
     width: 100%;
     height: 32px;
     background: linear-gradient(var(--vp-c-bg), transparent 70%);
     content: "";
-  }
+  } */
 }
 
 @media (min-width: 1440px) {

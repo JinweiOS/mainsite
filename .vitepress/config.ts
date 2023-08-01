@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  appearance: 'dark',
   vite: {
     resolve: {
       alias: [
