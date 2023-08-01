@@ -1,7 +1,20 @@
 import { defineConfig } from 'vitepress'
+import { fileURLToPath, URL } from 'node:url'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPNavBar\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/src/CustomNavBar.vue', import.meta.url)
+          )
+        }
+      ]
+    }
+  },
   title: "BeingThink",
   description: "Make some useful and easy-to-use tools.",
   themeConfig: {
