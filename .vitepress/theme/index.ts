@@ -1,7 +1,14 @@
-import Layout from './src/layout.vue'
-import DefaultTheme from 'vitepress/theme-without-fonts'
+import BeingThink from './src/layout.vue'
+import {h} from 'vue'
+import DefaultTheme from 'vitepress/theme'
 import './color.css'
+import './over.css'
 
 export default {
-  extends: DefaultTheme,
+  ...DefaultTheme,
+  // Layout: () => {
+  //   return h(DefaultTheme.Layout, null, {
+  //     'home-features-after': () => h(BeingThink),
+  //   })
+  // },
 }

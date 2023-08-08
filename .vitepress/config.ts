@@ -4,18 +4,6 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   appearance: 'dark',
-  vite: {
-    resolve: {
-      alias: [
-        {
-          find: /^.*\/VPNavBar\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/src/CustomNavBar.vue', import.meta.url)
-          )
-        }
-      ]
-    }
-  },
   title: "BeingThink",
   description: "Make some useful and easy-to-use tools.",
   themeConfig: {
@@ -55,6 +43,12 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/beingthink' },
-    ]
+      { icon: 'twitter', link: 'https://twitter.com/beingthink01'}
+    ],
+
+    footer: {
+      message: '世界，需要我们去做点美好的事',
+      copyright: 'Copyright © 2023-PRESENT Jinwei Peng',
+    },
   }
 })

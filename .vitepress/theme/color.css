@@ -9,3 +9,7 @@
   --vp-c-green-dimm-2: rgba(16, 185, 129, 0.2);
   --vp-c-green-dimm-3: rgba(16, 185, 129, 0.5);
 }
+
+.curtain::before {
+  display: none !important;
+}
