@@ -1,0 +1,4 @@
+/** 去除导航栏shadow */
+.curtain::before {
+  display: none !important;
+}
