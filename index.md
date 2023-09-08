@@ -21,8 +21,10 @@ features:
     link: https://vinsp.beingthink.com/
     linkText: 试试看
   - icon: 🕹️
-    title: Awlong
-    details: 组局来把阿瓦隆，用这个投票吧！省点时间来推断谁是梅林🥳
+    title: ChatGPT
+    details: 不多说，使用需要key😀
+    link: https://ai.beingthink.com/
+    linkText: 获取AI能力
   - icon: 👔
     title: Resume
     details: 魔改自markdown-resume，校招生用它来写简历，非常的nice！

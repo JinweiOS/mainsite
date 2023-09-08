@@ -1,6 +1,7 @@
 {
   "name": "beingthink-static",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,7 +16,7 @@
   "dependencies": {
     "@types/node": "^20.4.5",
     "@vueuse/core": "^10.3.0",
-    "vitepress": "1.0.0-beta.5",
+    "vitepress": "1.0.0-rc.10",
     "vue": "^3.3.4"
   }
 }
