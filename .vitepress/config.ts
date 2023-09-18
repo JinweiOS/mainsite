@@ -36,7 +36,8 @@ export default defineConfig({
         text: '博客',
         collapsed: true,
         items: [
-          { text: 'Babel最佳实践', link: '/docs/blog/2023/0730-babel-usage.md' }
+          { text: 'Babel最佳实践', link: '/docs/blog/2023/0730-babel-usage.md' },
+          { text: 'MySQL8.0安装配置', link: '/docs/blog/2023/0918-mysql-config.md' }
         ]
       }
     ],
