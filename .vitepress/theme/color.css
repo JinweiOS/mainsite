@@ -1,13 +1,13 @@
 :root {
-  /* #915eff */
-  --vp-c-green: #915eff;
-  --vp-c-green-light: #9c6efe;
-  --vp-c-green-lighter: #a47aff;
-  --vp-c-green-dark: #7448d4;
-  --vp-c-green-darker: #6c43c4;
-  --vp-c-green-dimm-1: rgba(16, 185, 129, 0.05);
-  --vp-c-green-dimm-2: rgba(16, 185, 129, 0.2);
-  --vp-c-green-dimm-3: rgba(16, 185, 129, 0.5);
+  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
 }
 
 .curtain::before {
