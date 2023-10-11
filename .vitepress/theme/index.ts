@@ -1,5 +1,3 @@
-import BeingThink from './src/layout.vue'
-import {h} from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './color.css'
 import './rainbow.css'

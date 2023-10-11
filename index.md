@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title: "Make some useful and easy-to-use tools"
 
 hero:
   name: "BeingThink Team"
