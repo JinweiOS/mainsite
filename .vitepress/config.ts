@@ -12,7 +12,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: 'Pnpm安装', link: '/docs/pnpm/pnpm-mirror.md' },
+      { text: 'Pnpm独立脚本安装', link: '/docs/pnpm/pnpm-mirror.md' },
       { text: '博客', link: '/docs/blog/2023/0730-babel-usage.md' }
     ],
 
@@ -28,7 +28,7 @@ export default defineConfig({
         text: 'Pnpm',
         collapsed: true,
         items: [
-          { text: 'pnpm镜像脚本', link: '/docs/pnpm/pnpm-mirror.md' }
+          { text: 'pnpm独立脚本安装', link: '/docs/pnpm/pnpm-mirror.md' }
         ]
       },
       {
