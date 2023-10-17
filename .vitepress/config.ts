@@ -36,7 +36,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Babel最佳实践', link: '/docs/blog/2023/0730-babel-usage.md' },
-          { text: 'MySQL8.0安装配置', link: '/docs/blog/2023/0918-mysql-config.md' }
+          { text: 'MySQL8.0安装配置', link: '/docs/blog/2023/0918-mysql-config.md' },
+          { text: 'PostgreSQL使用及其向量扩展', link: '/docs/blog/2023/1017-postgresql-config.md', }
         ]
       }
     ],
