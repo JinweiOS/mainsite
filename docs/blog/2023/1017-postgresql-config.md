@@ -1,4 +1,4 @@
-# ubuntu 20.04 安装PostgreSQL
+# PostgreSQL使用及其向量扩展
 
 ## 说明
 
