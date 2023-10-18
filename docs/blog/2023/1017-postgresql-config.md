@@ -2,20 +2,33 @@
 
 ## 说明
 
-ubuntu内置了PostgreSQL安装包，因此安装步骤简介明了
+由于在国内，因此使用镜像源安装，配置中科大源
 
 ```shell
-sudo apt update
-sudo apt install postgresql postgresql-contrib
+# 添加中科大deb 仓库地址配置
+sudo sh -c 'echo "deb http://mirrors.ustc.edu.cn/postgresql/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+# 导入中科大签名key:
+wget --quiet -O - http://mirrors.ustc.edu.cn/postgresql/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+
+# 更新软件包列表:
+sudo apt-get update
+
+# 安装最新 PostgreSQL 版本.
+# 安装指定版本如  'postgresql-12' 替换 'postgresql':
+sudo apt-get -y install postgresql
+sudo apt-get -y install postgresql-10
+sudo apt-get -y install postgresql-11
+sudo apt-get -y install postgresql-12
 ```
 
 安装完成后，查看PostgreSQL的状态是否正常，如果未启动，手动将其启动
 
 ```shell
-sudo systemctl status postgresql.service
+sudo systemctl status postgresql@15-main
 
 # 启动postgresql
-sudo systemctl start postgresql.service
+sudo systemctl start postgresql@15.service
 ```
 
 ## 登录数据库
@@ -50,6 +63,66 @@ postgres@server:~$ createdb ubuntu
 
 ```shell
 # 在当前用户下，进入test数据库
-psql -d test
+psql -d test -p 5432
 ```
+
+## 远程连接
+
+### 配置用户密码
+
+远程登录需要使用密码，先给用户设置密码，登录进入sql命令行，执行如下sql
+
+```sql
+ubuntu=# alter user ubuntu with password '123456';
+ALTER ROLE
+```
+
+### 配置PostgreSQL允许远程访问
+
+1. 配置postgresql.conf，允许service运行在真实网口上
+
+```shell
+ sudo vim /etc/postgresql/15/main/postgresql.conf
+
+ #------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+
+# - Connection Settings -
+listen_addresses = '*' # 增加此行
+#listen_addresses = 'localhost'         # what IP address(es) to listen on;
+                                        # comma-separated list of addresses;
+                                        # defaults to 'localhost'; use '*' for all
+                                        # (change requires restart)
+port = 5432                             # (change requires restart)
+max_connections = 100                   # (change requires restart)
+```
+
+2. 配置pg_hba.conf
+
+修改用户网段配置，允许所有客户端通过密码验证方式登录
+
+```shell
+ sudo vim /etc/postgresql/15/main/pg_hba.conf
+
+# IPv4 local connections:
+#host    all             all             127.0.0.1/32            scram-sha-256
+host    all             all             0.0.0.0/0            scram-sha-256 # 增加此行
+```
+
+之后重启服务即可
+
+```shell
+sudo systemctl restart postgresql
+```
+
+至此，即可通过Navicat等终端工具连接PostgreSQL了。
+
+## 向量扩展安装
+
+pgvecto.rs扩展是针对PostgreSQL-15开发的，因此，前置应该安装15版本的数据库。安装方式具体可见[pgvecto.rs](https://github.com/tensorchord/pgvecto.rs/blob/main/docs/install.md)官方地址。
+
+:::tip 注意
+sudo apt install ./vectors-pg15-*.deb 此条命令的执行，需要加上路径，官方文档没有提醒
+:::
 
