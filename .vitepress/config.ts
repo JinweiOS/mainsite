@@ -37,14 +37,23 @@ export default defineConfig({
         items: [
           { text: 'Babel最佳实践', link: '/docs/blog/2023/0730-babel-usage.md' },
           { text: 'MySQL8.0安装配置', link: '/docs/blog/2023/0918-mysql-config.md' },
-          { text: 'PostgreSQL使用及其向量扩展', link: '/docs/blog/2023/1017-postgresql-config.md', }
+          { text: 'PostgreSQL使用及其向量扩展', link: '/docs/blog/2023/1017-postgresql-config.md', },
+          // QA栏
+          {
+            text: '日常Q&A',
+            base: '/docs/qa/',
+            collapsed: true,
+            items: [
+              { text: 'sudo 子命令找不到', link: 'sudo.md' }
+            ]
+          }
         ]
       }
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/beingthink' },
-      { icon: 'twitter', link: 'https://twitter.com/beingthink01'}
+      { icon: 'twitter', link: 'https://twitter.com/beingthink01' }
     ],
 
     footer: {
