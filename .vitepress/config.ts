@@ -38,6 +38,7 @@ export default defineConfig({
           { text: 'Babel最佳实践', link: '/docs/blog/2023/0730-babel-usage.md' },
           { text: 'MySQL8.0安装配置', link: '/docs/blog/2023/0918-mysql-config.md' },
           { text: 'PostgreSQL使用及其向量扩展', link: '/docs/blog/2023/1017-postgresql-config.md', },
+          { text: 'Node.js不错的Debug方式', link: '/docs/blog/2023/1028-node-debug.md'},
           // QA栏
           {
             text: '日常Q&A',
@@ -57,7 +58,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '世界，需要我们去做点美好的事',
+      message: '每天都去寻找世界上正向的新鲜事，如果没有，就去看看家乡的稻穗和夜晚的星星',
       copyright: 'Copyright © 2023-PRESENT Jinwei Peng',
     },
   }
