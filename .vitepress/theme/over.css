@@ -1,7 +1,7 @@
 /** 网站置灰 */
-html {
+/* html {
   filter: grayscale(100%);
-}
+} */
 
 /** 去除导航栏shadow */
 .curtain::before {
