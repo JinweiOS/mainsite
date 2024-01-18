@@ -52,7 +52,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/beingthink' },
+      { icon: 'github', link: 'https://github.com/jinweios' },
       { icon: 'twitter', link: 'https://twitter.com/beingthink01' }
     ],
 
