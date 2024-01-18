@@ -13,7 +13,8 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'Pnpm独立脚本安装', link: '/docs/pnpm/pnpm-mirror.md' },
-      { text: '博客', link: '/docs/blog/2023/0730-babel-usage.md' }
+      { text: '博客', link: '/docs/blog/2023/0730-babel-usage.md' },
+      { text: 'Credit', link: '/docs/blog/2024/0118-credit.md' },
     ],
 
     sidebar: [
@@ -48,7 +49,7 @@ export default defineConfig({
             ]
           }
         ]
-      }
+      },
     ],
 
     socialLinks: [
