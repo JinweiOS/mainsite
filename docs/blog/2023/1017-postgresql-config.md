@@ -47,35 +47,36 @@ psql
 postgres=# \q
 ```
 
-保持用户名为postgres，可以创建一个新用户，例如，笔者的ubuntu系统中默认用户名为ubuntu，因此可以执行如下命令，创建新用户
+## 创建新用户
+
+:::info
+新用户创建主要包括三步：创建用户并设置密码，创建和用户同名的数据库，授权
+:::
+
+保持用户名为postgres，可以创建一个新用户，创建新用户使用一下命令
 
 ```shell
 postgres@server:~$ createuser --interactive
+# 后续交互命令行中，创建testuser用户名
+# 或使用以下命令
+postgres=# CREATE USER testuser WITH PASSWORD '123456';
 ```
 
-用户创建完之后，如果直接进行登录，会提示没有名为ubuntu的数据库。因为PostgreSQL的默认逻辑是，如果用新创建的用户名登录数据库，默认登录的数据库名称和当前用户名同名，所以在创建完新用户后，还需要创建同名的数据库
+用户创建完之后，如果直接进行登录，会提示没有名为testuser的数据库。因为PostgreSQL的默认逻辑是，如果用新创建的用户名登录数据库，默认登录的数据库名称和当前用户名同名，所以在创建完新用户后，还需要创建同名的数据库，并进行授权
 
 ```shell
-postgres@server:~$ createdb ubuntu
+postgres=# createdb testuser owner testuser;
+postgres=# grant all ON database testuser to testuser;
 ```
 
 如果当前用户有多个数据库，登录时可以使用`-d`参数进行指定
 
 ```shell
 # 在当前用户下，进入test数据库
-psql -d test -p 5432
+psql -d testuser -p 123456
 ```
 
 ## 远程连接
-
-### 配置用户密码
-
-远程登录需要使用密码，先给用户设置密码，登录进入sql命令行，执行如下sql
-
-```sql
-ubuntu=# alter user ubuntu with password '123456';
-ALTER ROLE
-```
 
 ### 配置PostgreSQL允许远程访问
 
