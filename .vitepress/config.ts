@@ -58,7 +58,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '世界，需要我们去做点美好的事',
+      message: '你当下所行走的，都是值得你珍重的',
       copyright: 'Copyright © 2023-PRESENT Jinwei Peng',
     },
   }
