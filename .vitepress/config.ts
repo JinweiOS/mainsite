@@ -54,7 +54,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/jinweios' },
-      { icon: 'twitter', link: 'https://twitter.com/beingthink01' }
+      // { icon: 'twitter', link: 'https://twitter.com/beingthink01' }
     ],
 
     footer: {
