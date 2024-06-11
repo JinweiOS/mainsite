@@ -32,11 +32,11 @@ features:
     details: 魔改自markdown-resume，校招生用它来写简历，非常的nice！
     link: https://resume.beingthink.com
     linkText: 我也要写一份
-  - icon: ⌨️
-    title: Vinsp
-    details: 零配置，初学者友好的一键部署平台，两分钟拥有一个Vue.js应用！
-    link: https://vinsp.beingthink.com/
-    linkText: 试试看
+  # - icon: ⌨️
+  #   title: Vinsp
+  #   details: 零配置，初学者友好的一键部署平台，两分钟拥有一个Vue.js应用！
+  #   link: https://vinsp.beingthink.com/
+  #   linkText: 试试看
   - icon: 🕹️
     title: ChatGPT
     details: 不多说，使用需要key😀
