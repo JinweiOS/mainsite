@@ -2,6 +2,7 @@
 
 ## OSP PRs
 
+- [pgvecto.rs数据库向量扩展](https://github.com/tensorchord/pgvecto.rs) 支持输出 Postgresql 数据库日志格式 [#483](https://github.com/tensorchord/pgvecto.rs/pull/483)
 - [rescript 中文站翻译](https://rescript-idea.github.io/docs-cn/manual/latest/bind-to-js-function) 完成【Bind to JS章节的翻译 [#110](https://github.com/rescript-idea/rescript-lang.org-chinese-translation/pull/110) [#23](https://github.com/rescript-idea/rescript-lang.org-chinese-translation/pull/23)
 - [rescript 英文站](https://rescript-lang.org/) win开发启动问题修复 [#584](https://github.com/rescript-association/rescript-lang.org/pull/584)
 - [UnoCss 主站](https://unocss.dev/) 主站文档死链接修复 [#2686](https://github.com/unocss/unocss/pull/2686)
